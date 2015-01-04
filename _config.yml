@@ -1,34 +1,34 @@
-title:            Notepad
-description:      "Blogging is fun"
+title:            Guide to Kulchur
+description:      "Cooperative Press, Bookstore & Community Center in Cleveland, Ohio"
 logo:             logo.png
-disqus_shortname: hmfaysal
+disqus_shortname: gtk
 share:            true
 dropcap:			true
 # Change url to your domain. Leave localhost server or blank when working locally.
-# or use the hint from http://jekyllrb.com/docs/github-pages/ to keep this the same 
+# or use the hint from http://jekyllrb.com/docs/github-pages/ to keep this the same
 # whether working locally or remotely. Start Jekyll with: jekyll serve --baseurl ''
-url:        	  /Notepad
+#url:        	  /
 
 # Owner/author information
 owner:
-  name:           Hossain Mohd Faysal
-  avatar:         hmfaysal.jpg
-  email:          hmfaysal@alum.mit.edu
+  name:           Guide to Kulchur Cooperative
+  avatar:         gtk.jpg
+  email:          gtk@guidetokulchurcleveland.com
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
   description:    Awesome Dude, Awesome Life
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        hmfaysal
-  facebook:       hmfaysal
-  github:         hmfaysal      
-  instagram:      hmfaysal
+  twitter:        guide2kulchur
+  facebook:       guide2kulchur
+  github:         guide2kulchur
+  instagram:      guide2kulchur
   # For Google Authorship https://plus.google.com/authorship
   google_plus:    https://plus.google.com/u/0/102602916593522619858
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   UA-39365944-7
-google_verify:      
+google_verify:
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:         
+bing_verify:
 
 # Links to include in footer navigation
 # For external links add external: true
@@ -37,8 +37,8 @@ links:
     url: /
     external: false
     icon: home
-  - title: Featured Posts
-    url: /featured
+  - title: Press
+    url: /press
   - title: Categories
     url: /categories
   - title: About
@@ -63,7 +63,7 @@ kramdown:
   use_coderay: false
 
   coderay:
-    coderay_line_numbers: 
+    coderay_line_numbers:
     coderay_line_numbers_start: 1
     coderay_tab_width: 4
     coderay_bold_every: 10
@@ -75,27 +75,38 @@ prose:
   relativeLinks: 'http://hmfaysal.github.io/Notepad/links.jsonp'
   media: 'images'
   metadata:
-    _posts:
-      - name: "published"
-        field:
-          label: "Published"
-          element: "checkbox"
-          value: "true"
+    "":
       - name: "layout"
         field:
           element: "hidden"
           label: "Layout"
-          value: "post"
+          value: "page"
       - name: "title"
         field:
           label: "Title"
           element: "text"
           value: "An Awesome Headline!"
+
+    _posts/post:
+      - name: "category"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "published"
+        field:
+          label: "Published"
+          element: "checkbox"
+          value: "false"
+      - name: "layout"
+        field:
+          element: "hidden"
+          label: "Layout"
+          value: "post"
       - name: "description"
         field:
           element: "text"
           label: "Description"
-          placeholder: "Enter Post Description"
+          placeholder: "Description"
       - name: "headline"
         field:
           element: "text"
@@ -136,11 +147,6 @@ prose:
           element: "text"
           label: "Featured Image"
           placeholder: "somefile.jpg"
-      - name: "mathjax"
-        field:
-          element: "checkbox"
-          label: "MathJax"
-          value: false
       - name: "featured"
         field:
           element: "checkbox"
